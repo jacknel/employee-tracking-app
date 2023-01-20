@@ -1,5 +1,4 @@
 const { prompt } = require("inquirer");
-
 const db = require("./db");
 require("console.table");
 
@@ -10,7 +9,7 @@ function init() {
 }
 
 function displayMainMenu() {
-    const options = [
+    const choices = [
       { name: "View All Employees", value: "VIEW_EMPLOYEES" },
       { name: "Add Employee", value: "ADD_EMPLOYEE" },
       { name: "Update Employee Role", value: "UPDATE_EMPLOYEE_ROLE" },
@@ -23,9 +22,9 @@ function displayMainMenu() {
   
     prompt({
       type: "list",
-      name: "option",
+      name: "choice",
       message: "Pick an option.",
-      options
+      choices
     });
   }
   
